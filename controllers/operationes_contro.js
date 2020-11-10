@@ -17,7 +17,7 @@ exports.sum = (req,res,next) =>{
        const valueOne = +req.body.valueOne;
        const valueTwo = +req.body.valueTwo;
        const fac=factory.create("/sum",valueOne,valueTwo);
-       console.log(fac,"resultado : ", fac.valueOne+fac.valueTwo)
+       console.log("suma :",fac,"resultado : ", fac.valueOne+fac.valueTwo)
        const resultado = valueOne+valueTwo;
        res.status(201).json({messege:"suma success." ,data :{ resultado }});
        
@@ -49,7 +49,7 @@ exports.subtraction = (req,res,next) =>{
         const valueOne = +req.body.valueOne;
         const valueTwo = +req.body.valueTwo;
         const fac=factory.create("/subtraction",valueOne,valueTwo);
-       console.log(fac,"resultado : ", fac.valueOne-fac.valueTwo)
+       console.log("resta :",fac,"resultado : ", fac.valueOne-fac.valueTwo)
         const resultado = valueOne-valueTwo;
         res.status(201).json({messege:"resta success." ,data :{ resultado }});
         
@@ -79,7 +79,7 @@ exports.subtraction = (req,res,next) =>{
             const valueOne = +req.body.valueOne;
             const valueTwo = +req.body.valueTwo;
             const fac=factory.create("/multiplication",valueOne,valueTwo);
-            console.log(fac,"resultado : ", fac.valueOne*fac.valueTwo)
+            console.log("multiplicacion :",fac,"resultado : ", fac.valueOne*fac.valueTwo)
             const resultado = valueOne*valueTwo;
             res.status(201).json({messege:"multiplicacion success." ,data :{ resultado }});
             
@@ -111,7 +111,7 @@ exports.division = (req,res,next) =>{
         const valueOne = +req.body.valueOne;
         const valueTwo = +req.body.valueTwo;
         const fac=factory.create("/division",valueOne,valueTwo);
-        console.log(fac,"resultado : ", fac.valueOne/fac.valueTwo)
+        console.log("devision :",fac,"resultado : ", fac.valueOne/fac.valueTwo)
         const resultado = valueOne/valueTwo;
         res.status(201).json({messege:"divison success." ,data :{ resultado }});
         
